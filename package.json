@@ -1,0 +1,36 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development electron .",
+    "start": "cross-env NODE_ENV=production electron .",
+    "build": "electron-rebuild",
+    "redev": "yarn build;yarn dev",
+    "restart": "yarn build;yarn start",
+    "debug1": "cross-env DEBUG=electron-compile:* yarn dev",
+    "debug2": "cross-env DEBUG=*,-babel yarn start"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-prebuilt-compile": "^4.0.0",
+    "electron-rebuild": "^1.8.4"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.5.3"
+  }
+}
