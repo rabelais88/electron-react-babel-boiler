@@ -23,6 +23,9 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-pug": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
     "electron-prebuilt-compile": "^4.0.0",
     "electron-rebuild": "^1.8.4"
   },

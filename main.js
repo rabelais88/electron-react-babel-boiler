@@ -5,7 +5,7 @@ import {enableLiveReload} from 'electron-compile';
 import { ipcMain } from 'electron-better-ipc';
 const ipc = ipcMain;
 
-ipc.answerRenderer('ping!', async req => {
+ipc.answerRenderer('ping', async req => {
   console.log(req)
 	return 'aaa';
 });

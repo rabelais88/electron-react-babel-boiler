@@ -4,16 +4,19 @@ import { ipcRenderer } from 'electron-better-ipc';
 const ipc = ipcRenderer;
 
 const App = () => {
+  const [ipcRes, setIpcRes] = useState('');
   const ping = async e => {
     e.preventDefault();
     const res = await ipc.callMain('ping', 'mereq');
-    console.log(res);
+    setIpcRes(res)
+    return null;
   }
-  return (
-    <div>
-      <button onClick={ping}>ping app</button>
-    this is a react app! haha, test me!
-    </div>)
+  return pug`
+    div
+      button(onClick=${ping}) get the ping!
+      p this is react app!
+      p ${ipcRes}
+  `
 }
 
 export default App;
